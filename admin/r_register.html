@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>用户注册界面</title>
+  <style>
+    body{
+      background: url(../images/admin.webp);
+      background-size: cover;
+    }
+    .container{
+      margin: 0 auto;
+      width: 500px;
+    }
+    form{
+      width: 450px;
+      margin: 0 auto;
+      background-color:rgba(155, 189, 219, 0.7);
+      border-radius: 15px;
+      position: relative;
+    }
+    h1{
+      font-size: 28px;
+      text-align: center;
+      color: #FFF;
+    }
+    .p{
+      color: red;
+      margin-left: 17px;
+      display: inline-block;
+    }
+    label{
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .register{
+      height: 35px;
+      width: 300px;
+    }
+    .q{
+      color:red;
+      margin-left:17px;
+      display:inline-block;
+    }
+    .submit{
+      border-radius: 7px;
+      margin-left: 150px;
+      height: 35px;
+      width: 150px;
+      background-color: #000;
+      border: none;
+      display: block;
+      padding: 0;
+      color: #FFF;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    a{
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .left,.right{
+      position: absolute;
+      bottom: 20px;
+    }
+    .left{
+      left: 20px;
+    }
+    .right{
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>管理员注册</h1>
+    <form action="r_register.php" method="post">
+      <br>
+      <span class="p">*</span>
+      <label for="username">管理员名</label>
+      <input type="text" name="username" id="username" placeholder="" class="register"><br><br>
+      <span class="p">*</span>
+      <label for="key">许可密钥</label>
+      <input type="text" name="key" id="key" class="register">
+      <br><br>
+      <span class="q">*</span>
+      <label for="pwd">登录密码</label>
+      <input type="password" name="password" id="pwd" class="register"><br><br>
+      <span class="q">*</span>
+      <label for="c_pwd">确认密码</label>
+      <input type="password" name="" id="c_pwd" class="register"><br><br>
+      <input type="submit" name="" value="注册" class="submit" onclick="register(this)"><br>
+      <a href="../index.html" class="left">返回首页</a>
+      <a href="../guest/login.html" class="right">开始登录</a>
+    </form>
+  </div>
+</body>
+</html>
